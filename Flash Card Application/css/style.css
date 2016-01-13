@@ -1,0 +1,90 @@
+/* Basic Style */
+body {
+  background: #fff;
+  color: #333;
+  font-family: Lato, sans-serif;
+}
+.container {
+  display: block;
+  width: 400px;
+  margin: 100px auto 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li * {
+  float: left;
+}
+li, h3 {
+  clear:both;
+  list-style:none;
+}
+input, button {
+  outline: none;
+}
+button {
+  background: #6490bb;
+  transition: .3s;
+  border: 0px;
+  color: #888;
+  margin-top: 1em;
+  padding: .5em;
+  color: white;
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+button:hover {
+  color: white;
+  background: #369;
+  transition: .3s;
+}
+/* Heading */
+h2 {
+   border-bottom: 2px solid #369;
+   padding: 30px 0 10px;
+   color: #369;
+}
+
+h3,
+label[for='new-task'] {
+  color: #bfbfbf;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #bfbfbf;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* Card Container */
+.card-container {
+   background: #FFF;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+   padding: 1em;
+   font-size: 24pt;
+   vertical-align: middle;
+   text-align: center;
+}
+
+/* End Message */
+#endMessage {
+   display: none;
+}
