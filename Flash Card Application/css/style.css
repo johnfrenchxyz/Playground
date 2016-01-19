@@ -29,16 +29,17 @@ button {
   border: 0px;
   color: #888;
   margin-top: 1em;
-  padding: .5em;
+  padding: .5em .5em .7em .5em;
   color: white;
   font-size: 15px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  border-radius: 5px;
 }
 button:hover {
   color: white;
   background: #369;
-  transition: .3s;
+  transition: .1s;
 }
 /* Heading */
 h2 {
@@ -74,14 +75,65 @@ input[type="text"]:focus {
   color: #333;
 }
 
+/* Card Counter */
+#cardCounter {
+   display: none;
+   font-size: 24px;
+   float:right;
+   color: rgb(138, 179, 194);
+   margin: 2em 0 0 0;
+}
+
 /* Card Container */
-.card-container {
+#card {
+   visibility: hidden;
    background: #FFF;
    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
    padding: 1em;
    font-size: 24pt;
    vertical-align: middle;
    text-align: center;
+   border-radius: 5px;
+}
+
+/* Begin Button */
+#beginButton {
+   width: 100%;
+   font-size: 24px;
+   background: rgb(32, 158, 154);
+   color: #ffffff;
+   padding: .5em .5em .7em .5em;
+   border-radius: 5px;
+}
+
+#beginButton:hover {
+   background: rgb(9, 110, 106);
+}
+
+/* Next Button */
+#nextButton {
+   display: none;
+   width: 100%;
+}
+
+/* Correct Answer Button */
+#correctAnswer {
+   background: rgb(76, 163, 106);
+   float: right;
+   display: none;
+   width: 45%;
+} #correctAnswer:hover {
+   background: rgb(48, 126, 75);
+}
+
+/* Incorrect Answer Button */
+#incorrectAnswer {
+   background: rgb(190, 63, 63);
+   float: left;
+   display: none;
+   width: 45%;
+} #incorrectAnswer:hover {
+   background: rgb(164, 45, 45);
 }
 
 /* End Message */
