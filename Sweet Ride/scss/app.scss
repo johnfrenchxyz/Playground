@@ -1,9 +1,16 @@
-// Typography
+// Imports
+//--------
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
-// Variables
+// Color Variables
+//----------
 $pink: #c872c2;
 $white: #ffffff;
+
+// Utility Classes
+//----------------
+.pink { background: $pink; color: $pink; }
 
 body {
    background: $pink;
@@ -12,8 +19,63 @@ body {
    text-align: center;
 }
 
+// Typography
+//-----------
+$roboto: 'Roboto', sans-serif;
+$lobster: 'Lobster', cursive;
+
 h1 {
    font-family: 'Lobster', cursive;
    color: $white;
    font-size: 3em;
+}
+
+h2 {
+   font-family: $roboto;
+   color: $white;
+   font-size: 1.5em;
+   font-weight: 400;
+}
+
+p { font-family: $roboto; color: $white; }
+
+// Container
+//----------
+.container {
+   width: 80%;
+   padding: 1em;
+   margin: 0 auto;
+   background: darken($pink, 20%);
+   border-radius: .5em;
+
+}
+
+// Buttons
+//--------
+$button-bg: $pink;
+
+@mixin button($background, $background-hover, $color) {
+   background: $background;
+   color: $color;
+   font-family: $lobster;
+   border: none;
+   font-size: 1.5em;
+   padding: 1em;
+   margin: .5em;
+   display: block;
+   cursor: pointer;
+   border-radius: .2em;
+   transition: 250ms ease;
+   &:hover { background: $background-hover; }
+}
+
+button {
+   @include button( $button-bg, darken($button-bg, 20%), $white );
+   border-bottom: 3px solid darken($button-bg, 5%);
+   margin: 0 auto;
+   outline: none;
+}
+
+#select-character {
+   display: none;
 }
