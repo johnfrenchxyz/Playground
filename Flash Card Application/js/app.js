@@ -15,17 +15,32 @@
 
 // Create the testing deck object (Eventually this will be contained elsewere)
 var deckOne = [
-   ["2 + 2", "4"],
-   ["1 + 6", "7"],
-   ["20 + 10", "30"],
-   ["5 - 4", "1"],
-   ["10 - 10", "0"],
-   //["15 + 2", "17"],
-   //["6 + 8 + 1", "15"],
-   //["1 + 0", "1"],
-   //["I love you", ""],
-   //["6 + 6", "12"],
-]
+   ["a", "a"],
+   ["I", "I"],
+   ["am", "am"],
+   ["at", "at"],
+   ["can", "can"],
+   ["ran", "ran"],
+   ["had", "had"],
+   ["in", "in"],
+   ["it", "it"],
+   ["big", "big"],
+   ["did", "did"],
+   ["will", "will"],
+   ["him", "him"],
+   ["not", "not"],
+   ["on", "on"],
+   ["run", "run"],
+   ["up", "up"],
+   ["but", "but"],
+   ["is", "is"],
+   ["as", "as"],
+   ["his", "his"],
+   ["red", "red"],
+   ["get", "get"],
+   ["well", "well"],
+   ["yes", "yes"]
+];
 
 // Card bin arrays
 var correctAnswers = [];
@@ -61,7 +76,7 @@ var flashCardActions = function() {
    var cardCounter = document.getElementById("cardCounter");
 
    // Deck check (to see if all cards have been viewed)
-   if (deckOne.length == 0) {
+   if (deckOne.length === 0) {
       // If there are incorrectAnswers to go over...
       if (incorrectAnswers.length > 0) {
          var maxIncorrect = incorrectAnswers.length;
@@ -69,7 +84,7 @@ var flashCardActions = function() {
          var getCardIncorrect = incorrectAnswers[cardNumberIncorrect];
 
          // cardCounter vars for the incorrectAnswers deck
-         var cardTotal = incorrectAnswers.length;
+         cardTotal = incorrectAnswers.length;
 
          // Display the cardCounter
          cardCounter.style.display = "block";
@@ -99,7 +114,7 @@ var flashCardActions = function() {
                flashCardActions();
                // Show the nextButton
                nextButton.style.display = "block";
-            }
+            };
             // Show the incorrectAnswer Button
             incorrectAnswer.style.display = "block";
             // On incorrectAnswer click:
@@ -113,8 +128,8 @@ var flashCardActions = function() {
                flashCardActions();
                // Show the nextButton
                nextButton.style.display = "block";
-            }
-         }
+            };
+         };
       } else {
          card.style.display = "none";
          cardCounter.style.display = "none";
@@ -135,8 +150,8 @@ var flashCardActions = function() {
    // Card Actions
    nextButton.onclick = function() {
       // Logic for if back is blank
-      if (getCard[back] == "") {
-         card.innerHTML = "(blank)"
+      if (getCard[back] === "") {
+         card.innerHTML = "(blank)";
       } else {
          // Display the back of the card.
          card.innerHTML = getCard[back];
@@ -157,7 +172,7 @@ var flashCardActions = function() {
          flashCardActions();
          // Show the nextButton
          nextButton.style.display = "block";
-      }
+      };
       // Show the incorrectAnswer Button
       incorrectAnswer.style.display = "block";
       // On incorrectAnswer click:
@@ -171,9 +186,9 @@ var flashCardActions = function() {
          flashCardActions();
          // Show the nextButton
          nextButton.style.display = "block";
-      }
-   }
-}
+      };
+   };
+};
 
 // Start the game
 beginButton.onclick = function() {
@@ -186,4 +201,4 @@ beginButton.onclick = function() {
    // Run the app
    flashCardActions();
 
-}
+};
