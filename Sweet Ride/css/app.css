@@ -52,5 +52,17 @@ button {
 
 #select-character {
   display: none; }
+  #select-character .character {
+    display: inline-block;
+    margin: .5em;
+    padding: .5em;
+    border: 1px solid #ba4db2;
+    width: 40%;
+    transition: 250ms ease; }
+    #select-character .character:hover {
+      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+#my-character {
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */
