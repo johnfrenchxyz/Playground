@@ -76,6 +76,18 @@ button {
    outline: none;
 }
 
+// Character Selection
 #select-character {
    display: none;
+   .character {
+      display: inline-block;
+      margin: .5em;
+      padding: .5em;
+      border: 1px solid darken($pink, 10%);
+      width: 40%;
+      transition: 250ms ease;
+      &:hover { box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+   }
 }
+
+#my-character { display: none; }
